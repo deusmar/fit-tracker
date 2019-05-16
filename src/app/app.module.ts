@@ -14,7 +14,6 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingComponent } from './training/past-training/past-training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaerComponent } from './navigation/heaer/heaer.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
@@ -28,7 +27,6 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     NewTrainingComponent,
     PastTrainingComponent,
     WelcomeComponent,
-    HeaerComponent,
     HeaderComponent,
     SidenavListComponent
   ],
