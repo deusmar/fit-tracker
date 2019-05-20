@@ -20,10 +20,12 @@ export class AuthService {
             email: authData.email,
             userId: Math.round(Math.random() * 100000).toString()
         };
+        this.authChange.next(true);
     }
 
     logout() {
         this.user = null;
+        this.authChange.next(false);
     }
 
     getUser() {
