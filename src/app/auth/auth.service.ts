@@ -1,0 +1,36 @@
+import { Subject } from 'rxjs/Subject';
+import { User } from './user.model';
+import { AuthData } from './auth-data.model';
+
+export class AuthService {
+    authChange = new Subject<boolean>();
+    private user: User;
+
+    registerUser(authData: AuthData) {
+        this.user = {
+            email: authData.email,
+            userId: Math.round(Math.random() * 100000).toString()
+        };
+
+        this.authChange.next(true);
+    }
+
+    login(authData: AuthData) {
+        this.user = {
+            email: authData.email,
+            userId: Math.round(Math.random() * 100000).toString()
+        };
+    }
+
+    logout() {
+        this.user = null;
+    }
+
+    getUser() {
+        return { ...this.user };
+    }
+
+    isAuth() {
+        return this.user != null;
+    }
+}
